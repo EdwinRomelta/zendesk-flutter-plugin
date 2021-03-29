@@ -5,7 +5,7 @@ author: ChangeFinance <gabriel@getchange.com>
 homepage: https://github.com/ChangeFinance/zendesk-flutter-plugin
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
