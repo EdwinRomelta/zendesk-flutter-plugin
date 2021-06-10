@@ -7,6 +7,8 @@ void main() {
   const MethodChannel channel =
       MethodChannel('plugins.flutter.zendesk_chat_api/calls');
 
+  TestWidgetsFlutterBinding.ensureInitialized();
+
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
       return '42';
