@@ -81,7 +81,7 @@ public class ZendeskFlutterPlugin implements MethodCallHandler {
 
   public static void registerWith(PluginRegistry.Registrar registrar) {
     if (!(registrar.activity() instanceof FlutterFragmentActivity)) {
-      throw new IllegalArgumentException("FRAGMENT_ACTIVITY_REQUIRED. Add dependency \"implementation 'com.android.support:support-v4:28.0.0'\" in build.gradle and extend your MainActivity from FlutterFragmentActivity");
+      return;
     }
     final MethodChannel callsChannel = new MethodChannel(registrar.messenger(), "plugins.flutter.zendesk_chat_api/calls");
     final EventChannel connectionStatusEventsChannel = new EventChannel(registrar.messenger(), "plugins.flutter.zendesk_chat_api/connection_status_events");

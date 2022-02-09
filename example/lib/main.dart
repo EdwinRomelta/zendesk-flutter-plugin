@@ -127,7 +127,7 @@ class _MyAppState extends State<MyApp> {
             RaisedButton(
               onPressed: () async {
                 final file =
-                    await ImagePicker.pickImage(source: ImageSource.gallery);
+                    await ImagePicker().pickImage(source: ImageSource.gallery);
                 if (file != null) {
                   try {
                     await _chatApi.sendAttachment(file.path);
